@@ -22,7 +22,7 @@ pip install ibapi oandapyV20
 ### 1. Run Your First Backtest
 
 ```bash
-python -m trading_platform.cli run \
+python -m trading_platform run \
   -f examples/cli_test_strategy.py \
   -s 2023-01-01 \
   -e 2023-12-31 \
@@ -56,7 +56,7 @@ Backtest complete!
 ### 2. Multiple Symbols
 
 ```bash
-python -m trading_platform.cli run \
+python -m trading_platform run \
   -f examples/momentum_strategy.py \
   -s 2020-01-01 \
   -e 2023-12-31 \
@@ -67,7 +67,7 @@ python -m trading_platform.cli run \
 ### 3. Save Results to File
 
 ```bash
-python -m trading_platform.cli run \
+python -m trading_platform run \
   -f examples/cli_test_strategy.py \
   -s 2020-01-01 \
   -e 2023-12-31 \
@@ -84,7 +84,7 @@ This creates:
 ### 4. With Custom Parameters
 
 ```bash
-python -m trading_platform.cli run \
+python -m trading_platform run \
   -f examples/cli_test_strategy.py \
   -s 2020-01-01 \
   -e 2023-12-31 \
@@ -100,7 +100,7 @@ python -m trading_platform.cli run \
 ### Backtest Command (`run`)
 
 ```bash
-python -m trading_platform.cli run --help
+python -m trading_platform run --help
 ```
 
 **Required Options:**
@@ -125,7 +125,7 @@ python -m trading_platform.cli run --help
 ⚠️ **WARNING: Only use after thorough testing!**
 
 ```bash
-python -m trading_platform.cli live \
+python -m trading_platform live \
   -f examples/cli_test_strategy.py \
   --broker ib \
   --symbols AAPL \
@@ -149,7 +149,7 @@ python -m trading_platform.cli live \
 
 ```bash
 # Test a moving average strategy on Apple stock
-python -m trading_platform.cli run \
+python -m trading_platform run \
   -f examples/simple_ma_crossover.py \
   -s 2020-01-01 \
   -e 2023-12-31 \
@@ -161,7 +161,7 @@ python -m trading_platform.cli run \
 
 ```bash
 # Test momentum strategy across multiple tech stocks
-python -m trading_platform.cli run \
+python -m trading_platform run \
   -f examples/momentum_strategy.py \
   -s 2020-01-01 \
   -e 2023-12-31 \
@@ -174,7 +174,7 @@ python -m trading_platform.cli run \
 
 ```bash
 # Run backtest, save results, and show plot
-python -m trading_platform.cli run \
+python -m trading_platform run \
   -f examples/multi_asset_strategy.py \
   -s 2020-01-01 \
   -e 2023-12-31 \
@@ -188,7 +188,7 @@ python -m trading_platform.cli run \
 
 ```bash
 # Simulate higher trading costs
-python -m trading_platform.cli run \
+python -m trading_platform run \
   -f examples/cli_test_strategy.py \
   -s 2020-01-01 \
   -e 2023-12-31 \
@@ -202,7 +202,7 @@ python -m trading_platform.cli run \
 
 ```bash
 # Just show performance metrics
-python -m trading_platform.cli run \
+python -m trading_platform run \
   -f examples/cli_test_strategy.py \
   -s 2023-01-01 \
   -e 2023-12-31 \
@@ -245,13 +245,13 @@ Our CLI is similar to Zipline but with some differences:
 
 ```bash
 # General help
-python -m trading_platform.cli --help
+python -m trading_platform --help
 
 # Help for run command
-python -m trading_platform.cli run --help
+python -m trading_platform run --help
 
 # Help for live command
-python -m trading_platform.cli live --help
+python -m trading_platform live --help
 ```
 
 ## Next Steps

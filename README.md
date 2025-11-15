@@ -31,7 +31,33 @@ pip install -e .
 
 ## Quick Start
 
-### Backtesting Example
+### Command Line Interface (Zipline-style)
+
+Run a backtest from the command line:
+
+```bash
+# Basic backtest
+python -m trading_platform run \
+  -f examples/cli_test_strategy.py \
+  -s 2020-01-01 \
+  -e 2023-12-31 \
+  --symbols AAPL \
+  --capital-base 100000
+
+# Multiple symbols with output
+python -m trading_platform run \
+  -f examples/momentum_strategy.py \
+  -s 2020-01-01 \
+  -e 2023-12-31 \
+  --symbols AAPL,GOOGL,MSFT \
+  --capital-base 100000 \
+  -o results.txt \
+  --plot
+```
+
+See [COMMAND_LINE_EXAMPLES.md](COMMAND_LINE_EXAMPLES.md) for more CLI examples.
+
+### Python API - Backtesting Example
 
 ```python
 from trading_platform.core.strategy import Strategy
@@ -123,18 +149,35 @@ The platform follows a modular, event-driven architecture:
 
 ## Documentation
 
-- [Getting Started](docs/getting_started.md)
-- [Backtesting Guide](docs/backtesting.md)
-- [Live Trading Guide](docs/live_trading.md)
-- [Strategy Development](docs/strategy_development.md)
+- [COMMAND_LINE_EXAMPLES.md](COMMAND_LINE_EXAMPLES.md) - 🇪🇸 Ejemplos CLI en español
+- [QUICKSTART_CLI.md](QUICKSTART_CLI.md) - CLI Quick Start Guide
+- [CLI_EXAMPLES.md](CLI_EXAMPLES.md) - Advanced CLI Examples
+- [Getting Started](docs/getting_started.md) - Getting started with Python API
+- [Backtesting Guide](docs/backtesting.md) - Detailed backtesting guide
+- [Live Trading Guide](docs/live_trading.md) - Live trading deployment
+- [Strategy Development](docs/strategy_development.md) - Strategy patterns
 
 ## Examples
 
 See the `examples/` directory for complete strategy implementations:
 
+- `cli_test_strategy.py`: Simple MA crossover for CLI
 - `simple_ma_crossover.py`: Moving average crossover strategy
 - `momentum_strategy.py`: Momentum-based trading strategy
 - `multi_asset_strategy.py`: Portfolio strategy across multiple assets
+
+## CLI Usage
+
+```bash
+# Get help
+python -m trading_platform --help
+
+# Backtest help
+python -m trading_platform run --help
+
+# Live trading help
+python -m trading_platform live --help
+```
 
 ## Testing
 
