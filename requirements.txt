@@ -8,13 +8,14 @@ yfinance>=0.2.28
 alpha-vantage>=2.3.1
 requests>=2.31.0
 
-# Broker APIs
-ibapi>=9.81.1  # Interactive Brokers
-oandapyV20>=0.6.3  # OANDA
+# Broker APIs (optional - only needed for live trading)
+# ibapi>=9.81.1  # Interactive Brokers
+# oandapyV20>=0.6.3  # OANDA
+# Install manually if needed: pip install ibapi oandapyV20
 
 # Technical analysis
-ta-lib>=0.4.28  # Technical Analysis Library (optional, requires compilation)
-pandas-ta>=0.3.14b0  # Pure Python alternative
+# ta-lib>=0.4.28  # Technical Analysis Library (optional, requires compilation)
+# pandas-ta>=0.3.14b0  # Pure Python alternative (not required - we have built-in indicators)
 
 # Visualization
 matplotlib>=3.7.0
@@ -32,6 +33,10 @@ asyncio>=3.4.3
 # Configuration
 python-dotenv>=1.0.0
 pyyaml>=6.0
+
+# CLI
+click>=8.1.0
+tqdm>=4.65.0
 
 # Logging
 loguru>=0.7.0
