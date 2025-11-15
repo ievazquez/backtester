@@ -46,7 +46,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "trading-platform=trading_platform.__main__:main",
+            "quantline=trading_platform.quantline:main",
         ],
     },
 )

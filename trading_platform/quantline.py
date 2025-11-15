@@ -9,7 +9,7 @@ import os
 
 @click.group()
 def cli():
-    """Trading Platform - Backtesting and Live Trading System."""
+    """QuantLine - Quantitative Trading Platform (Zipline-inspired)."""
     pass
 
 
@@ -105,7 +105,7 @@ def run(algofile, algotext, data_frequency, capital_base, start, end,
     Run a backtest for the given strategy.
 
     Example:
-        trading-platform run -f my_strategy.py -s 2020-01-01 -e 2023-12-31 --symbols AAPL,GOOGL
+        quantline run -f my_strategy.py -s 2020-01-01 -e 2023-12-31 --symbols AAPL,GOOGL
     """
     try:
         # Validate inputs

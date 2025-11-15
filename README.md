@@ -2,6 +2,8 @@
 
 A comprehensive Python-based trading platform for quantitative traders and technical analysis researchers.
 
+**QuantLine CLI**: Zipline-inspired command-line interface for backtesting and live trading.
+
 ## Features
 
 ### 1. Backtesting Engine (Priority 1)
@@ -37,7 +39,7 @@ Run a backtest from the command line:
 
 ```bash
 # Basic backtest
-python -m trading_platform run \
+python -m trading_platform.quantline run \
   -f examples/cli_test_strategy.py \
   -s 2020-01-01 \
   -e 2023-12-31 \
@@ -45,7 +47,7 @@ python -m trading_platform run \
   --capital-base 100000
 
 # Multiple symbols with output
-python -m trading_platform run \
+python -m trading_platform.quantline run \
   -f examples/momentum_strategy.py \
   -s 2020-01-01 \
   -e 2023-12-31 \
@@ -170,13 +172,13 @@ See the `examples/` directory for complete strategy implementations:
 
 ```bash
 # Get help
-python -m trading_platform --help
+python -m trading_platform.quantline --help
 
 # Backtest help
-python -m trading_platform run --help
+python -m trading_platform.quantline run --help
 
 # Live trading help
-python -m trading_platform live --help
+python -m trading_platform.quantline live --help
 ```
 
 ## Testing

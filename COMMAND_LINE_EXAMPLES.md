@@ -13,7 +13,7 @@ pip install numpy pandas scipy matplotlib click tqdm python-dateutil pytz
 
 ### 1. Backtest Simple (1 símbolo)
 ```bash
-python -m trading_platform run \
+python -m trading_platform.quantline run \
   -f examples/cli_test_strategy.py \
   -s 2023-01-01 \
   -e 2023-12-31 \
@@ -23,7 +23,7 @@ python -m trading_platform run \
 
 ### 2. Backtest con Múltiples Símbolos
 ```bash
-python -m trading_platform run \
+python -m trading_platform.quantline run \
   -f examples/momentum_strategy.py \
   -s 2020-01-01 \
   -e 2023-12-31 \
@@ -33,7 +33,7 @@ python -m trading_platform run \
 
 ### 3. Guardar Resultados en Archivo
 ```bash
-python -m trading_platform run \
+python -m trading_platform.quantline run \
   -f examples/cli_test_strategy.py \
   -s 2020-01-01 \
   -e 2023-12-31 \
@@ -46,7 +46,7 @@ python -m trading_platform run \
 
 ### 4. Con Comisiones y Slippage Personalizados
 ```bash
-python -m trading_platform run \
+python -m trading_platform.quantline run \
   -f examples/cli_test_strategy.py \
   -s 2020-01-01 \
   -e 2023-12-31 \
@@ -58,7 +58,7 @@ python -m trading_platform run \
 
 ### 5. Frecuencia de Datos Horaria
 ```bash
-python -m trading_platform run \
+python -m trading_platform.quantline run \
   -f examples/cli_test_strategy.py \
   -s 2023-11-01 \
   -e 2023-12-31 \
@@ -69,7 +69,7 @@ python -m trading_platform run \
 
 ### 6. Con Gráfico de Equity Curve
 ```bash
-python -m trading_platform run \
+python -m trading_platform.quantline run \
   -f examples/cli_test_strategy.py \
   -s 2020-01-01 \
   -e 2023-12-31 \
@@ -80,7 +80,7 @@ python -m trading_platform run \
 
 ### 7. Solo Métricas (Salida Resumida)
 ```bash
-python -m trading_platform run \
+python -m trading_platform.quantline run \
   -f examples/cli_test_strategy.py \
   -s 2023-01-01 \
   -e 2023-12-31 \
@@ -91,7 +91,7 @@ python -m trading_platform run \
 
 ### 8. Portafolio Multi-Asset
 ```bash
-python -m trading_platform run \
+python -m trading_platform.quantline run \
   -f examples/multi_asset_strategy.py \
   -s 2020-01-01 \
   -e 2023-12-31 \
@@ -135,7 +135,7 @@ zipline run \
 
 ### Trading Platform Equivalente:
 ```bash
-python -m trading_platform run \
+python -m trading_platform.quantline run \
   -f examples/cli_test_strategy.py \
   -s 2020-01-01 \
   -e 2023-12-31 \
@@ -233,12 +233,12 @@ TRADING STATISTICS
 
 ### Paso 1: Verificar instalación
 ```bash
-python -m trading_platform --help
+python -m trading_platform.quantline --help
 ```
 
 ### Paso 2: Ejecutar ejemplo simple
 ```bash
-python -m trading_platform run \
+python -m trading_platform.quantline run \
   -f examples/cli_test_strategy.py \
   -s 2023-01-01 \
   -e 2023-12-31 \
@@ -248,7 +248,7 @@ python -m trading_platform run \
 
 ### Paso 3: Guardar resultados
 ```bash
-python -m trading_platform run \
+python -m trading_platform.quantline run \
   -f examples/cli_test_strategy.py \
   -s 2023-01-01 \
   -e 2023-12-31 \
@@ -266,7 +266,7 @@ cat mi_primer_backtest_trades.csv
 
 ### Paso 5: Probar con múltiples símbolos
 ```bash
-python -m trading_platform run \
+python -m trading_platform.quantline run \
   -f examples/momentum_strategy.py \
   -s 2023-01-01 \
   -e 2023-12-31 \
@@ -288,13 +288,13 @@ python -m trading_platform run \
 
 ```bash
 # Ayuda general
-python -m trading_platform --help
+python -m trading_platform.quantline --help
 
 # Ayuda comando run
-python -m trading_platform run --help
+python -m trading_platform.quantline run --help
 
 # Ayuda comando live (trading en vivo)
-python -m trading_platform live --help
+python -m trading_platform.quantline live --help
 ```
 
 ## 📚 Recursos Adicionales
